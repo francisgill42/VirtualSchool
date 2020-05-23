@@ -50,8 +50,10 @@ export default {
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
-  axios: {
-  },
+ axios: {
+   baseURL: 'https://management.webndesign.website/api/'
+      // baseURL: 'http://localhost/pro/wow/public/api' 
+},
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
@@ -61,15 +63,7 @@ export default {
     theme: {
       dark: false,
       themes: {
-        dark: {
-          primary: colors.teal.darken3,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        },
+        
         light: {
           primary: colors.teal.darken1,
           accent: colors.grey.darken3,

@@ -1,19 +1,28 @@
 <template>
-  <v-layout>
-    <v-flex class="text-center">
-      <img
-        src="/v.png"
-        alt="Vuetify.js"
-        class="mb-5"
-      >
-      <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote>
-    </v-flex>
-  </v-layout>
+  <v-form
+    name="contact" netlify
+    lazy-validation
+  >
+    <v-text-field
+      name="name"
+      :counter="10"
+      label="Name"
+      required
+    ></v-text-field>
+
+    <v-text-field
+      email="email"
+      label="E-mail"
+      required
+    ></v-text-field>
+
+  
+    <v-btn
+      color="warning"
+      type="submit"
+    >
+      Submit
+    </v-btn>
+  </v-form>
 </template>
+

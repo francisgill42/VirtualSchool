@@ -13,7 +13,7 @@ sm="4"
 <iframe 
 height="225px"
 width="100%"
-:src="item.link" 
+:src="`https://www.youtube.com/embed/${item.link}`" 
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen>
@@ -36,12 +36,14 @@ export default {
 components:{ Back },    
 data: () => ({
 
-items:[
-{ title: 'Alphabets', link: 'https://www.youtube.com/embed/' + 'KBPAI6qLW5o' },
-],
+items:[],
 
 
 }),
-created(){}
+created(){
+        this.$axios.get('videos').then((res) =>{
+            this.items = res.data.filter((v) => v.level.id == 1 && v.subject_id == 1);
+        })
+}
 }
 </script>
