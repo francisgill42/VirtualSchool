@@ -1,7 +1,7 @@
 <template>
  
     <v-container>
-      <v-row dense>
+      <v-row>
       
         <v-col
           v-for="(item, i) in items"
@@ -18,7 +18,7 @@
               <div>
                 <v-card-title
                 
-                  class="headline"
+                  class="subheading"
                   v-text="item.title"
                 ></v-card-title>
 
@@ -41,14 +41,32 @@
     data: () => ({
       
       items:[
-        { color: '#385F73',title: 'English', link: '/montessori/english' },
-        { color: '#385F73',title: 'Urdu', link: '/montessori/urdu' },
-        { color: '#385F73',title: 'Math', link: '/montessori/math' },
-        { color: '#385F73',title: 'General Knowledge', link: '/montessori/gk' },
-        { color: '#385F73',title: 'Drawing', link: '/montessori/drawing' },
+        { color: 'primary',title: 'English', link: '/montessori/english' },
+        { color: 'primary',title: 'Urdu', link: '/montessori/urdu' },
+        { color: 'primary',title: 'Math', link: '/montessori/math' },
+        { color: 'primary',title: 'General Knowledge', link: '/montessori/gk' },
+        { color: 'primary',title: 'Drawing', link: '/montessori/drawing' },
       ],
 
      
     }),
+    created(){
+      //   let payload = {
+      //   token: "mGHuIZ4Eb0kqtgABcGMjrQ",
+      //   data: {
+      //   links: [
+      //     "one","two"
+      //   ]
+      //   }
+      //   };
+
+
+
+
+      // const res = this.$axios.post('https://app.fakejson.com/q',payload)
+      // .then(r => console.log(r));
+      
+      
+    }
   }
 </script>
