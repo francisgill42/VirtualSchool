@@ -28,6 +28,10 @@
 
             </div>
           </v-card>
+         
+        </v-col>
+        <v-col cols="12" sm="4">
+           <Back :destination="'/classes'"/>
         </v-col>
 
               
@@ -36,7 +40,10 @@
 </template>
 
 <script>
+import Back from '../../components/Back';
+
   export default {
+    components : { Back },
     auth:false,
     data: () => ({
       
@@ -44,8 +51,8 @@
         { color: 'primary',title: 'English', link: '/montessori/english' },
         { color: 'primary',title: 'Urdu', link: '/montessori/urdu' },
         { color: 'primary',title: 'Math', link: '/montessori/math' },
-        { color: 'primary',title: 'General Knowledge', link: '/montessori/gk' },
-        { color: 'primary',title: 'Drawing', link: '/montessori/drawing' },
+        // { color: 'primary',title: 'General Knowledge', link: '/montessori/gk' },
+        // { color: 'primary',title: 'Drawing', link: '/montessori/drawing' },
       ],
 
      

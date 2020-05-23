@@ -63,6 +63,9 @@
       app
     >
       <span>&copy; {{ new Date().getFullYear() }}</span>
+      <v-spacer />
+      <a class="primary white--text" style="text-decoration:none;"
+      href ="mailto: francisgill1000@gmail.com">Contact Us</a>
     </v-footer>
   </v-app>
 </template>

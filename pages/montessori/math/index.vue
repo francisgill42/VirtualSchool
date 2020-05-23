@@ -9,18 +9,21 @@ cols="12"
 sm="4"
 >
 <v-card>
+
 <iframe 
-    width="100%"
-    :src="item.link" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
+height="225px"
+width="100%"
+:src="item.link" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen>
 </iframe>
 
 <v-card-actions class="primary white--text" > {{item.title}} </v-card-actions>
 
 </v-card>
 
+<Back :destination="'/montessori'"/>
 </v-col>
 
 </v-row>
@@ -28,24 +31,17 @@ sm="4"
 </template>
 
 <script>
+import Back from '../../../components/Back';
 export default {
+components:{ Back },    
 data: () => ({
 
 items:[
-{ title: 'Chapter 1', link: 'https://www.youtube.com/embed/' + 'hq3yfQnllfQ' },
-{ title: 'Chapter 2', link: 'https://www.youtube.com/embed/' + 'hq3yfQnllfQ' },
-{ title: 'Chapter 3', link: 'https://www.youtube.com/embed/' + 'hq3yfQnllfQ' },
-{ title: 'Chapter 4', link: 'https://www.youtube.com/embed/' + 'hq3yfQnllfQ' },
-{ title: 'Chapter 5', link: 'https://www.youtube.com/embed/' + 'hq3yfQnllfQ' },
-{ title: 'Chapter 6', link: 'https://www.youtube.com/embed/' + 'hq3yfQnllfQ' },
-{ title: 'Chapter 7', link: 'https://www.youtube.com/embed/' + 'hq3yfQnllfQ' },
-{ title: 'Chapter 8', link: 'https://www.youtube.com/embed/' + 'hq3yfQnllfQ' },
-{ title: 'Chapter 9', link: 'https://www.youtube.com/embed/' + 'hq3yfQnllfQ' },
-{ title: 'Chapter 10', link: 'https://www.youtube.com/embed/' + 'hq3yfQnllfQ' },
-
+{ title: 'Learn 10 Little Numbers For Kids', link: 'https://www.youtube.com/embed/' + 'CaN7FUYvWfM' },
 ],
 
 
 }),
+created(){}
 }
 </script>

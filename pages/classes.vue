@@ -21,12 +21,23 @@ sm="4"
 </v-card>
 </v-col>
 
+
+<v-col
+cols="12"
+sm="4"
+>
+<Back :destination="'/'"/>
+</v-col>
+
 </v-row>
 </v-container>
 </template>
 
 <script>
+import Back from '../components/Back';
+
 export default {
+components : { Back },    
 data: () => ({
 
 
