@@ -51,7 +51,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
  axios: {
-   baseURL: 'https://management.webndesign.website/api/'
+   baseURL: 'https://sub.webndesign.website/api/'
       // baseURL: 'http://localhost/pro/wow/public/api' 
 },
   /*
