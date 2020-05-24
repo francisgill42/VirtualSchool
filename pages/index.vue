@@ -22,7 +22,7 @@
             </em>
           </div>
           <hr class="my-3">
-          &mdash; <a href="/classes">Classes</a>
+          &mdash; <a href="/levels">Levels</a>
           <br>
            <hr class="my-3">
           &mdash; <a href = "mailto: francisgill1000@gmail.com">Send Email</a>

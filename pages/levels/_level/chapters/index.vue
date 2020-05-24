@@ -1,7 +1,7 @@
 <template>
 
 <v-container>
-<v-row dense>
+<v-row>
 <v-col
 v-for="(item, i) in items"
 :key="i"
@@ -22,30 +22,37 @@ allowfullscreen>
 <v-card-actions class="primary white--text" > {{item.title}} </v-card-actions>
 
 </v-card>
-
-<Back :destination="'/montessori'"/>
 </v-col>
 
+
+
+</v-row>
+<v-row>
+     <!-- {{all}} -->
+    <v-col cols="12" sm="4">
+    <Back :destination="'/levels/' + id"/>
+</v-col>
 </v-row>
 </v-container>
 </template>
 
 <script>
-import Back from '../../../components/Back';
+import Back from '../../../../components/Back';
 export default {
 components:{ Back },    
 data: () => ({
 
-    items:[],    
+items:[],
+id:'',
+all:[],
 
 }),
-
 created(){
-
-     this.$axios.get('videos').then((res) =>{
-        this.items = res.data.filter((v) => v.level.id == 1 && v.subject_id == 3);
-     })
-
+        this.$axios.get('videos').then((res) =>{
+         //   this.all = res.data;
+            this.id = this.$route.params.level;
+            this.items = res.data.filter((v) => v.subject_id == this.id);
+        })
 
 
 }

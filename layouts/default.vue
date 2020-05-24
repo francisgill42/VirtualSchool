@@ -85,8 +85,8 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Classes',
-          to: '/classes'
+          title: 'Level',
+          to: '/levels'
         }
       ],
       miniVariant: false,
