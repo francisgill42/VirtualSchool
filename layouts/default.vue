@@ -6,7 +6,6 @@
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
-      dark
       app
     >
       <v-list>
@@ -57,15 +56,14 @@
       </v-container>
     </v-content>
     <v-footer
-     class="primary"
-     dark
+     class="primary white--text"
       :fixed="fixed"
       app
     >
       <span>&copy; {{ new Date().getFullYear() }}</span>
       <v-spacer />
       <a class="primary white--text" style="text-decoration:none;"
-      href ="mailto: francisgill1000@gmail.com">Contact Us</a>
+      href ="https://web.whatsapp.com/">Contact Us</a>
     </v-footer>
   </v-app>
 </template>
